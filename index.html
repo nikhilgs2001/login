@@ -1,9 +1,9 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
   <html>
   <head>
   <title>Welcome To Login Form</title>
   <style type="text/css">
-  	body
+body
    {
      margin:0px; background-color:Teal; color:#f7f7f7; font-family:Arial, Helvetica, sans-serif;
    }
@@ -34,12 +34,12 @@
     background-color:MediumTurquoise; outline:none;  border-radius: 2px; color:#f1f1f1; border:1px solid #f1f1f1;
    }
   </style>
- <script type="" src="https://npmcdn.com/parse@2.1.0/dist/parse.min.js"></script>
+  <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
   <script>
-      Parse.initialize("xWxXXMybnnMRcv5QSIKq0St1ssRGexYqk2eUR3WN", "Ssr0oskScCNDJOBJtdgc7gY3X31QOIwBiYrMVWNp");
-Parse.serverURL = "https://parseapi.back4app.com/";
- </script>
- <script>
+  	Parse.initialize("xWxXXMybnnMRcv5QSIKq0St1ssRGexYqk2eUR3WN","Ssr0oskScCNDJOBJtdgc7gY3X31QOIwBiYrMVWNp"); 
+    Parse.serverURL = 'https://parseapi.back4app.com/';
+  </script>
+  <script>
 function signUp()
 {
  var user = new Parse.User();
@@ -47,11 +47,11 @@ function signUp()
       var v = document.getElementById("pwd1").value;
     user.set("username", u);
     user.set("password", v);
-    //user.set("email", "knfrhujnl@exmple.com");
+    
   
     
     user.signUp().then(function(user) {
-        console.log('User created successful with name: ' + user.get("username") + ' and email: ' + user.get("email"));
+        console.log('User created successful with name: ' + user.get("username"));
     }).catch(function(error){
         console.log("Error: " + error.code + " " + error.message);
     });
